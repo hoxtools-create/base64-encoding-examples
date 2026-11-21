@@ -14,36 +14,43 @@ Base64 is an encoding method that converts binary data into an ASCII text repres
 
 ### PHP
 
+Source code: [php/base64-example.php](php/base64-example.php)
+
 ```php
 <?php
 
+declare(strict_types=1);
+
+// Original text
 $text = "Hello, HoxTools!";
 
-// Encode text
+// Encode text into Base64
 $encoded = base64_encode($text);
 
-echo "Encoded: " . $encoded . PHP_EOL;
-
-// Decode text
+// Decode Base64 back into text
 $decoded = base64_decode($encoded, true);
 
-echo "Decoded: " . $decoded . PHP_EOL;
+// Display results
+echo "Original Text: " . $text . PHP_EOL;
+echo "Encoded Text: " . $encoded . PHP_EOL;
+echo "Decoded Text: " . ($decoded !== false ? $decoded : "Invalid Base64") . PHP_EOL;
 ```
 
 ### JavaScript
 
+Source code: [javascript/base64-example.js](javascript/base64-example.js)
+
 ```javascript
+"use strict";
+
 const text = "Hello, HoxTools!";
 
-// Encode text
 const encoded = btoa(text);
-
-console.log("Encoded:", encoded);
-
-// Decode text
 const decoded = atob(encoded);
 
-console.log("Decoded:", decoded);
+console.log("Original Text:", text);
+console.log("Encoded Text:", encoded);
+console.log("Decoded Text:", decoded);
 ```
 
 **Note:** JavaScript `btoa()` and `atob()` work directly with binary strings. For Unicode text, use a UTF-8 compatible conversion approach.
