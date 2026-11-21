@@ -2,7 +2,7 @@
 
 Practical Base64 encoding and decoding examples using PHP and JavaScript.
 
-This repository is designed for beginners and developers who want to understand how Base64 works and how to use it in web applications.
+This repository provides beginner-friendly examples to understand Base64 encoding and decoding in web applications.
 
 ## What is Base64?
 
@@ -10,54 +10,23 @@ Base64 is an encoding method that converts binary data into an ASCII text repres
 
 **Important:** Base64 is encoding, not encryption. It does not protect sensitive information or provide security.
 
-## Examples
+## Source Code Examples
 
 ### PHP
 
-Source code: [php/base64-example.php](php/base64-example.php)
+A simple PHP example demonstrating Base64 encoding and decoding.
 
-```php
-<?php
-
-declare(strict_types=1);
-
-// Original text
-$text = "Hello, HoxTools!";
-
-// Encode text into Base64
-$encoded = base64_encode($text);
-
-// Decode Base64 back into text
-$decoded = base64_decode($encoded, true);
-
-// Display results
-echo "Original Text: " . $text . PHP_EOL;
-echo "Encoded Text: " . $encoded . PHP_EOL;
-echo "Decoded Text: " . ($decoded !== false ? $decoded : "Invalid Base64") . PHP_EOL;
-```
+[View PHP Example](php/base64-example.php)
 
 ### JavaScript
 
-Source code: [javascript/base64-example.js](javascript/base64-example.js)
+A simple JavaScript example demonstrating Base64 encoding and decoding.
 
-```javascript
-"use strict";
-
-const text = "Hello, HoxTools!";
-
-const encoded = btoa(text);
-const decoded = atob(encoded);
-
-console.log("Original Text:", text);
-console.log("Encoded Text:", encoded);
-console.log("Decoded Text:", decoded);
-```
-
-**Note:** JavaScript `btoa()` and `atob()` work directly with binary strings. For Unicode text, use a UTF-8 compatible conversion approach.
+[View JavaScript Example](javascript/base64-example.js)
 
 ## Try the Online Tool
 
-You can encode and decode text using the free HoxTools online tool:
+Encode and decode text using the free HoxTools online tool:
 
 https://hoxtools.com/tools/base64-encoder-decoder.php
 
